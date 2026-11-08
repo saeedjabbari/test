@@ -1,0 +1,1042 @@
+# MASTER PROMPT — TAKMILIONLINE
+## National Healthcare Insurance Network | 360° Product Audit, UX/UI Optimization & Scalable Architecture
+
+### ROLE & EXPERTISE
+
+Act as a senior multidisciplinary product development team consisting of:
+
+1. **Chief Product Officer (CPO):** Product strategy, roadmap, prioritization and product-market fit.
+2. **Solution Architect:** Scalable architecture, database design, API architecture and infrastructure.
+3. **Senior UX/UI Designer:** Information architecture, interaction design, responsive design and usability.
+4. **Healthcare Technology Consultant:** Medical service networks, insurance workflows and healthcare data management.
+5. **Database Architect:** Relational data modeling, normalization, integrity and data governance.
+6. **Cybersecurity Specialist:** Application security, privacy, access control and vulnerability assessment.
+7. **SEO & Growth Strategist:** Technical SEO, local SEO, organic acquisition and conversion.
+8. **QA & Performance Engineer:** Functional testing, load testing, accessibility and reliability.
+9. **Business Analyst:** Competitor analysis, monetization, B2B partnerships and commercial viability.
+
+Your assignment is to perform a comprehensive, evidence-based audit of Takmili Online and develop a professional implementation strategy for turning it into a reliable national healthcare insurance services platform.
+
+---
+
+# PART 01 — PROJECT CONTEXT
+
+### Product Information
+
+Product name: تکمیلی آنلاین (Takmili Online)
+
+Website:
+https://www.takmilionline.com/
+
+Current market:
+Iran
+
+Current operational coverage:
+- City: Urmia
+- Insurance provider: Karafarin Insurance
+- Current database: Medical centers contracted with Karafarin in Urmia
+
+Product concept:
+
+Takmili Online is a digital platform that helps people with supplementary health insurance find medical centers and healthcare providers based on their insurance coverage, specialty, location, street and search queries.
+
+### Existing Features
+
+- Search medical centers by name.
+- Filter by medical specialty.
+- Filter by street and neighborhood.
+- Display contracted medical centers.
+- Display contact numbers.
+- Direct phone calling.
+- Navigation through mapping applications.
+- Medical center categories.
+- Insurance selection.
+- Neighborhood and street selection.
+- User onboarding and application guide.
+- Guidance for reimbursement claims when a center is not contracted.
+- Links to relevant reimbursement procedures.
+- User feedback and reporting of incorrect center information.
+- Responsive interface and mobile navigation.
+
+### Existing Design Direction
+
+The current interface uses:
+- Persian RTL layout.
+- Blue as the primary brand color.
+- White and light-gray backgrounds.
+- Green for primary contact actions.
+- Orange for secondary highlights.
+- Rounded cards and modular content sections.
+- Fixed mobile navigation.
+- Search-focused interaction patterns.
+
+The existing visual identity should be preserved as the starting point.
+
+Do not redesign the interface merely to make it look different.
+
+Improve it only when there is a clear usability, accessibility, hierarchy, consistency or performance benefit.
+
+---
+
+# PART 02 — PRIMARY OBJECTIVE
+
+Transform Takmili Online into a scalable, multi-insurance, multi-city platform.
+
+The platform must eventually support:
+
+- All major supplementary insurance providers in Iran.
+- All Iranian provinces and cities.
+- Thousands of medical centers.
+- Multiple branches belonging to one healthcare organization.
+- Different contracts and coverage conditions for each insurance provider.
+- Large numbers of simultaneous users.
+- Continuous data updates.
+- Reliable search and filtering.
+- Dedicated administrative and organizational dashboards.
+- Future integration with insurance providers and healthcare systems.
+
+The platform must remain simple and intuitive for ordinary users even as its underlying architecture becomes significantly more sophisticated.
+
+**Core principle: Complexity should be handled by the system, not transferred to the user.**
+
+---
+
+# PART 03 — 360° WEBSITE AND PRODUCT AUDIT
+
+First, inspect the actual website.
+
+Do not rely exclusively on screenshots or assumptions.
+
+Examine all accessible pages, components, navigation paths, interactions and responsive states.
+
+Separate findings into:
+
+- Verified observations.
+- Probable weaknesses requiring further investigation.
+- Technical issues that cannot be verified without source-code or infrastructure access.
+- Recommended improvements.
+
+For each identified issue provide:
+1. Current condition.
+2. Problem.
+3. User or business impact.
+4. Severity.
+5. Recommended solution.
+6. Implementation complexity.
+
+### 3.1 UX Audit
+
+Analyze:
+
+- Homepage information hierarchy.
+- Search accessibility.
+- Insurance selection.
+- Medical specialty navigation.
+- City and neighborhood selection.
+- Search filters.
+- Medical center cards.
+- Contact interaction.
+- Navigation interaction.
+- User onboarding.
+- Empty search results.
+- Error states.
+- Loading states.
+- Mobile navigation.
+- Accessibility.
+- User journey consistency.
+
+Evaluate the platform through these user scenarios:
+
+**Scenario A:** A user wants to find a dermatologist covered by Karafarin Insurance in Urmia.
+
+**Scenario B:** A user wants to find the nearest contracted laboratory.
+
+**Scenario C:** A user has a different supplementary insurance provider and wants to find an ophthalmologist.
+
+**Scenario D:** A user wants to check whether a particular hospital has a valid contract with their insurance.
+
+**Scenario E:** A user discovers that a listed medical center no longer accepts their insurance and reports the issue.
+
+**Scenario F:** A user cannot find an appropriate contracted center and needs to understand the reimbursement process.
+
+Identify unnecessary interactions, excessive cognitive load and opportunities to reduce the number of steps.
+
+### 3.2 UI Audit
+
+Evaluate:
+
+- Visual hierarchy.
+- Typography and Persian readability.
+- Spacing system.
+- Color consistency.
+- Component consistency.
+- Button hierarchy.
+- Iconography.
+- Card structure.
+- Information density.
+- Responsive behavior.
+- Contrast.
+- Accessibility.
+- Desktop/mobile parity.
+
+Preserve the current brand language while developing a coherent design system.
+
+Deliver:
+- Design tokens.
+- Typography scale.
+- Spacing scale.
+- Color system.
+- Component inventory.
+- Component variants.
+- Interaction states.
+- Responsive breakpoints.
+
+Do not introduce unnecessary gradients, shadows, animations or decorative elements.
+
+### 3.3 Conversion and Engagement Audit
+
+Evaluate whether users can quickly complete their primary task.
+
+Measure:
+- Search initiation rate.
+- Search completion rate.
+- Contact click-through rate.
+- Navigation click-through rate.
+- Search abandonment.
+- Zero-result searches.
+- Repeat visits.
+- User-reported information errors.
+
+Recommend an analytics event architecture that respects user privacy.
+
+---
+
+# PART 04 — COMPETITIVE LANDSCAPE
+
+Conduct fresh research on the Iranian market.
+
+Investigate the following competitors and comparable services:
+
+- Fekr Azad / فکر آزاد
+- Official supplementary insurance provider portals.
+- Dana Insurance medical center search.
+- Didar24.
+- Other relevant insurance and healthcare directories.
+- Healthcare service platforms that provide location-based medical discovery.
+
+Do not assume that all of these services are direct competitors.
+
+Classify them as:
+1. Direct competitors.
+2. Indirect competitors.
+3. Official information sources.
+4. Potential partners.
+5. Comparable product and UX references.
+
+For each competitor investigate:
+
+- Core value proposition.
+- Search experience.
+- Insurance coverage.
+- City coverage.
+- Data accuracy mechanisms.
+- Medical center presentation.
+- Mobile experience.
+- SEO strategy.
+- Monetization.
+- Differentiation.
+- Weaknesses.
+- Opportunities for Takmili Online.
+
+Build a comparison matrix.
+
+Identify at least five meaningful competitive advantages that Takmili Online could realistically develop.
+
+Avoid generic claims such as better design, more features or faster service without defining how these advantages would be achieved.
+
+Cite sources and distinguish verified facts from assumptions.
+
+---
+
+# PART 05 — NATIONAL DATABASE ARCHITECTURE
+
+This is one of the most critical parts of the assignment.
+
+Design a database that supports multiple insurance providers, cities, medical centers and contracts without duplication or inconsistent records.
+
+### 5.1 Core Data Entities
+
+Evaluate and design the following entities:
+
+- Insurance Providers
+- Insurance Plans
+- Provinces
+- Cities
+- Districts
+- Streets
+- Medical Centers
+- Medical Center Branches
+- Medical Specialties
+- Medical Services
+- Medical Professionals
+- Insurance Contracts
+- Contracted Services
+- Contact Information
+- Geographical Coordinates
+- Working Hours
+- User Reports
+- Verification Records
+- Administrative Users
+- Audit Logs
+
+Determine which entities require independent tables and which should be represented through relationships.
+
+### 5.2 Critical Database Relationships
+
+The architecture must support:
+
+One medical center → Multiple branches.
+
+One medical center → Multiple insurance contracts.
+
+One insurance provider → Multiple insurance plans.
+
+One insurance plan → Multiple medical centers.
+
+One medical center → Multiple medical specialties and services.
+
+One city → Multiple neighborhoods and medical centers.
+
+One contract → Different validity periods and service conditions.
+
+One medical center → Different verification histories.
+
+Never duplicate the same medical center simply because it has contracts with multiple insurance companies.
+
+### 5.3 Contract Management
+
+Implement a robust contract lifecycle.
+
+Each insurance-center relationship should support:
+
+- Contract status.
+- Effective date.
+- Expiration date.
+- Suspension date.
+- Renewal.
+- Covered services.
+- Insurance plan restrictions.
+- Branch-specific conditions.
+- Verification source.
+- Last verification date.
+- Next verification date.
+
+Distinguish between:
+
+- Active contract.
+- Pending verification.
+- Temporarily suspended.
+- Expired.
+- Terminated.
+- Unverified information.
+
+Do not present an unverified contract as an active contract.
+
+Design historical records so that previous contract information is not lost when a contract changes.
+
+### 5.4 Data Quality
+
+Develop mechanisms for:
+
+- Duplicate detection.
+- Address normalization.
+- Persian and Arabic character normalization.
+- Phone number validation.
+- Geographical coordinate validation.
+- Specialty normalization.
+- Contract validity checks.
+- Automated stale-data detection.
+- Data import validation.
+- Human approval workflows.
+
+Define a unique identifier strategy for healthcare centers and branches.
+
+---
+
+# PART 06 — MULTI-INSURANCE AND MULTI-CITY SYSTEM
+
+Design the platform so that adding a new insurance provider or city does not require rebuilding the application.
+
+### Insurance Management
+
+Create an extensible insurance-provider management architecture.
+
+Each provider should have:
+
+- Name.
+- Logo.
+- Brand color, if needed.
+- Active status.
+- Available cities.
+- Available plans.
+- Contract data.
+- Verification sources.
+- Update history.
+
+Insurance selection must be intuitive.
+
+Consider two search modes:
+
+1. Search within a selected insurance provider.
+2. Search across multiple insurance providers.
+
+When a user selects multiple insurance providers, explain whether a center is contracted with all selected providers or at least one.
+
+Do not create ambiguity around coverage.
+
+### Geographic Architecture
+
+Support:
+
+- Province selection.
+- City selection.
+- Neighborhood selection.
+- Street selection.
+- Current location.
+- Nearby centers.
+- Map-based search.
+
+Design geographic data independently of the user interface.
+
+Use geographical indexing where appropriate.
+
+Consider PostGIS for proximity searches and spatial queries.
+
+---
+
+# PART 07 — SEARCH ENGINE AND DISCOVERY
+
+Develop a search strategy specifically optimized for Persian-language healthcare discovery.
+
+Support:
+
+- Medical center names.
+- Doctor names.
+- Medical specialties.
+- Insurance providers.
+- Streets.
+- Neighborhoods.
+- City names.
+- Services.
+- Partial search terms.
+- Common spelling mistakes.
+- Persian and Arabic character differences.
+- Half-spaces.
+- Persian and Latin numerals.
+
+Investigate PostgreSQL full-text search, trigram similarity and dedicated search engines.
+
+Do not introduce Elasticsearch or another separate search service unless actual requirements justify its operational cost.
+
+### Search Results
+
+Every medical center card should clearly communicate:
+
+- Center name.
+- Center category.
+- Specialty or services.
+- Insurance compatibility.
+- Contract verification status.
+- Address.
+- Distance, when available.
+- Phone number.
+- Last verification date, where appropriate.
+- Navigation action.
+- Contact action.
+
+Consider sorting by:
+
+- Relevance.
+- Distance.
+- Specialty.
+- Verification confidence.
+
+Avoid ranking centers using paid placement in ways that mislead users about insurance coverage or medical suitability.
+
+---
+
+# PART 08 — ADMINISTRATIVE DASHBOARD
+
+Design a centralized administration system.
+
+The platform cannot scale nationally through manual database editing.
+
+The dashboard should include:
+
+### 8.1 Insurance Management
+- Add and edit insurance providers.
+- Manage insurance plans.
+- Activate or deactivate providers.
+- Manage city coverage.
+- Import insurance-specific data.
+
+### 8.2 Medical Center Management
+- Add centers.
+- Edit centers.
+- Manage branches.
+- Manage addresses.
+- Manage contact information.
+- Manage specialties.
+- Manage geographical coordinates.
+- Detect duplicates.
+
+### 8.3 Contract Management
+- Create contracts.
+- Update contract status.
+- Set effective and expiration dates.
+- Manage covered services.
+- Track verification.
+- Review historical changes.
+
+### 8.4 User Reports
+- View submitted reports.
+- Prioritize reports.
+- Investigate incorrect information.
+- Approve or reject corrections.
+- Notify users when appropriate.
+
+### 8.5 Data Import and Export
+
+Support standardized CSV and Excel imports.
+
+Implement:
+
+- Field mapping.
+- Validation.
+- Duplicate detection.
+- Error reports.
+- Preview before import.
+- Transaction-safe imports.
+- Rollback.
+- Import history.
+
+Never allow a bulk import to silently overwrite valid records.
+
+### 8.6 Permissions
+
+Design role-based access control.
+
+Potential roles:
+
+- Super Administrator.
+- Platform Administrator.
+- Insurance Administrator.
+- City Manager.
+- Data Verification Operator.
+- Medical Center Manager.
+- Support Operator.
+
+An insurance administrator should only access authorized insurance data.
+
+A city manager should only modify authorized geographic areas.
+
+Every important change must be traceable.
+
+---
+
+# PART 09 — FUTURE ORGANIZATIONAL DASHBOARDS
+
+Evaluate the commercial and operational value of separate dashboards.
+
+### Insurance Company Dashboard
+
+Potential capabilities:
+
+- View contracted medical centers.
+- Submit center updates.
+- Upload contract data.
+- Review reported errors.
+- Monitor contract status.
+- View city-level coverage.
+- Generate reports.
+- Monitor search demand.
+
+### Medical Center Dashboard
+
+Potential capabilities:
+
+- Claim or verify center ownership.
+- Update phone numbers.
+- Update working hours.
+- Update address.
+- Submit contract information.
+- Manage branches.
+- Respond to user reports.
+
+Important:
+
+A medical center must never be able to independently declare that it has an active insurance contract without an appropriate verification process.
+
+---
+
+# PART 10 — TECHNICAL ARCHITECTURE AND INFRASTRUCTURE
+
+Inspect the existing implementation before recommending architectural changes.
+
+Do not assume a particular backend, database or deployment configuration without evidence.
+
+Evaluate:
+
+- Frontend architecture.
+- Backend architecture.
+- Database.
+- API structure.
+- Hosting.
+- Storage.
+- Domain and DNS.
+- Authentication.
+- Authorization.
+- Caching.
+- Logging.
+- Monitoring.
+- Backup.
+- Recovery.
+- Deployment.
+- CI/CD.
+
+### Architecture Recommendation
+
+Evaluate a modular, API-first architecture.
+
+Prefer a modular monolith initially unless actual system constraints justify distributed services.
+
+Define logical modules:
+
+1. Authentication.
+2. Insurance.
+3. Geography.
+4. Medical centers.
+5. Contracts.
+6. Search.
+7. User feedback.
+8. Administration.
+9. Analytics.
+10. Notifications.
+
+### Infrastructure
+
+Evaluate appropriate use of:
+
+- PostgreSQL.
+- PostGIS.
+- Redis.
+- Object storage.
+- CDN.
+- Reverse proxy.
+- Background job processing.
+- Monitoring.
+- Automated backups.
+
+Specify what is essential now, what can wait and what would be unnecessary overengineering.
+
+### Capacity Planning
+
+Provide three hypothetical growth scenarios:
+
+- Early stage: 10,000 registered users.
+- Growth stage: 100,000 registered users.
+- National scale: 1,000,000 registered users.
+
+For each scenario estimate:
+
+- Traffic assumptions.
+- Concurrent users.
+- Search request volume.
+- Database requirements.
+- Storage needs.
+- Caching strategy.
+- Infrastructure bottlenecks.
+
+Clearly state that these are planning assumptions, not measured current traffic.
+
+---
+
+# PART 11 — SECURITY, PRIVACY AND LEGAL COMPLIANCE
+
+Perform a security review.
+
+Consider:
+
+- Authentication.
+- Authorization.
+- Admin account security.
+- API protection.
+- Input validation.
+- SQL injection.
+- XSS.
+- CSRF where applicable.
+- Rate limiting.
+- Abuse prevention.
+- Data backups.
+- Audit trails.
+- Secrets management.
+- Dependency vulnerabilities.
+- File upload security.
+- Access isolation between insurance organizations.
+
+### Healthcare Data Privacy
+
+Keep the initial product focused on medical-center discovery.
+
+Do not collect sensitive health information unnecessarily.
+
+If future features introduce medical records, claim documents or patient-specific information, require a separate privacy and security architecture.
+
+Evaluate Iranian legal and regulatory obligations with reference to current authoritative sources and qualified local legal advice.
+
+Do not claim compliance without verification.
+
+---
+
+# PART 12 — SEO AND ORGANIC GROWTH
+
+Build a national SEO strategy.
+
+The platform should have useful, indexable pages for:
+
+- Insurance providers.
+- Provinces.
+- Cities.
+- Medical specialties.
+- Medical centers.
+- Relevant combinations of insurance, city and specialty.
+
+Example page structures:
+
+/insurance/karafarin
+
+/city/urmia
+
+/specialty/dermatology
+
+/insurance/karafarin/city/urmia
+
+/insurance/karafarin/city/urmia/specialty/laboratory
+
+Design canonical URL rules and prevent uncontrolled indexation of filter combinations.
+
+Evaluate:
+
+- Technical SEO.
+- Page performance.
+- Structured data.
+- Local search.
+- Internal linking.
+- Sitemap architecture.
+- Duplicate content.
+- Indexing controls.
+- Persian keyword strategy.
+
+Never create thousands of low-quality city and specialty pages containing insufficient information.
+
+---
+
+# PART 13 — MONETIZATION AND BUSINESS MODEL
+
+Develop commercially realistic monetization models.
+
+Evaluate:
+
+1. Insurance company subscriptions.
+2. Annual B2B platform licensing.
+3. Dedicated insurance portals.
+4. Data management and verification services.
+5. Medical center subscription services.
+6. Premium administrative dashboards.
+7. Enterprise API access.
+8. Sponsored medical center profiles, with transparent labeling.
+9. Aggregated and privacy-preserving market analytics.
+
+For each model evaluate:
+
+- Revenue potential.
+- Sales complexity.
+- Operational costs.
+- Customer acquisition.
+- Scalability.
+- Conflict of interest.
+- Trust implications.
+
+Prioritize revenue sources that do not compromise the accuracy of insurance information.
+
+Do not assume that users should pay for basic access to contracted-center discovery.
+
+Develop an initial B2B sales strategy targeting insurance providers.
+
+---
+
+# PART 14 — UI/UX REDESIGN AND DESIGN SYSTEM
+
+Do not replace the existing visual identity unnecessarily.
+
+Create an improved design system based on the current interface.
+
+The system should support:
+
+- Desktop.
+- Tablet.
+- Mobile.
+- PWA.
+- Future native application interfaces, if needed.
+
+Review and optimize these screens:
+
+1. Homepage.
+2. Main search.
+3. Insurance selection.
+4. City selection.
+5. Specialty selection.
+6. Search results.
+7. Medical center details.
+8. Map and nearby centers.
+9. User report form.
+10. Reimbursement guide.
+11. User favorites.
+12. User profile, if introduced.
+13. Admin dashboard.
+14. Insurance dashboard.
+15. Medical center dashboard.
+
+### Critical UX Requirements
+
+- Search should remain the primary interaction.
+- Insurance compatibility must be immediately understandable.
+- Contact and navigation must remain accessible.
+- The interface must not become crowded as data increases.
+- Filters should be progressive and context-aware.
+- Empty states should provide useful next actions.
+- Loading states must be designed.
+- Mobile interactions should prioritize thumb accessibility.
+- All critical actions must have clear feedback.
+
+Create a reusable component system rather than designing each page independently.
+
+---
+
+# PART 15 — QUALITY ASSURANCE AND TESTING
+
+Define a complete testing strategy.
+
+### Functional Testing
+- Search.
+- Filters.
+- Insurance switching.
+- City switching.
+- Phone calls.
+- Navigation.
+- User reports.
+- Data imports.
+- Contract updates.
+
+### Data Testing
+- Duplicate centers.
+- Multiple insurance contracts.
+- Multiple branches.
+- Expired contracts.
+- Missing phone numbers.
+- Incorrect coordinates.
+- Invalid specialties.
+- Historical contract records.
+
+### Performance Testing
+- Concurrent searches.
+- Large result sets.
+- Database indexing.
+- API response time.
+- Caching.
+- Mobile performance.
+- High-load scenarios.
+
+### Security Testing
+- Authentication.
+- Permissions.
+- API access.
+- File uploads.
+- Administrative operations.
+- Data isolation.
+
+### Accessibility Testing
+Evaluate WCAG 2.2 AA where applicable.
+
+Test keyboard navigation, contrast, focus states, readable typography and screen-reader semantics.
+
+### Automated Regression Testing
+
+Create tests that prevent future features from breaking existing search, filtering, navigation and insurance-selection workflows.
+
+---
+
+# PART 16 — DEVELOPMENT ROADMAP
+
+Produce a phased implementation roadmap.
+
+For every task provide:
+
+- Priority.
+- Expected impact.
+- Technical complexity.
+- Dependencies.
+- Estimated effort.
+- Risk.
+- Acceptance criteria.
+
+Use these priorities:
+
+P0 — Critical: must be addressed before major expansion.
+
+P1 — High: necessary for national growth.
+
+P2 — Medium: improves product quality and efficiency.
+
+P3 — Future: strategic expansion.
+
+Organize the roadmap into:
+
+### Phase A: Stabilization
+Fix existing critical weaknesses.
+
+### Phase B: Multi-insurance architecture
+Enable multiple insurance providers without duplicated records.
+
+### Phase C: Multi-city expansion
+Expand geographically using standardized data.
+
+### Phase D: Operational automation
+Implement administrative tools, data verification and imports.
+
+### Phase E: B2B integration
+Build insurance and medical center dashboards.
+
+### Phase F: National platform
+Optimize performance, coverage and service capabilities.
+
+Provide a realistic 3-month, 6-month and 12-month roadmap.
+
+Do not assume that all phases can be completed by one developer.
+
+Identify the minimum viable team and the skills needed at each stage.
+
+---
+
+# PART 17 — CRITICAL DECISIONS AND RISKS
+
+Explicitly investigate these questions:
+
+1. Should the platform operate as a centralized national database or separate city-level databases?
+2. How should one medical center with multiple insurance contracts be represented?
+3. How should contract validity be verified?
+4. Who should be responsible for updating information?
+5. How should conflicting information from insurers and medical centers be resolved?
+6. Should insurance providers have direct access to administrative tools?
+7. How can the platform prevent duplicate medical centers?
+8. How should a center with multiple branches be represented?
+9. How should the platform operate when contract information becomes outdated?
+10. What happens if an insurance provider does not cooperate?
+11. How should the system distinguish between a contracted center and a contracted service?
+12. How can the platform maintain data quality when expanding to hundreds of cities?
+13. What are the main infrastructure failure points?
+14. What features should deliberately be postponed?
+
+Provide a decision matrix for major architectural and business choices.
+
+Do not recommend expensive or complex solutions without demonstrating their necessity.
+
+---
+
+# PART 18 — FINAL DELIVERABLES
+
+Your final output must include:
+
+### A. Executive Summary
+A concise assessment of the product's current position and national potential.
+
+### B. Current Product Audit
+A complete list of strengths, weaknesses, risks and missed opportunities.
+
+### C. Competitor Analysis
+A sourced comparison of the most relevant Iranian competitors and reference products.
+
+### D. UX/UI Improvement Report
+Specific screen-level improvements and proposed interaction changes.
+
+### E. Database Architecture
+Entity relationship model, tables, relationships and critical fields.
+
+### F. Technical Architecture
+Recommended application architecture, infrastructure and APIs.
+
+### G. Administrative System
+Dashboard structure, roles and workflows.
+
+### H. National Expansion Strategy
+Insurance-provider and geographic expansion plan.
+
+### I. Security and Quality Plan
+Testing, monitoring, privacy and reliability requirements.
+
+### J. Business Model
+Revenue opportunities and B2B partnership strategy.
+
+### K. Implementation Roadmap
+Prioritized 3-, 6- and 12-month development plan.
+
+### L. Critical Action List
+The 20 most important actions, ranked by impact and urgency.
+
+---
+
+# PART 19 — EXECUTION RULES
+
+Follow these rules throughout the audit:
+
+1. Inspect before recommending.
+2. Never invent existing capabilities.
+3. Do not assume the current database is scalable or unscalable without inspection.
+4. Do not recommend rewriting the entire application without strong evidence.
+5. Preserve existing working functionality.
+6. Separate essential improvements from optional enhancements.
+7. Prioritize reliability and data accuracy over feature quantity.
+8. Keep the existing design language recognizable.
+9. Treat Persian RTL behavior as a core technical requirement.
+10. Consider Iran-specific infrastructure, payment, hosting and business constraints.
+11. Do not expose private information or credentials.
+12. Do not make destructive code or database changes without explicit approval.
+13. Do not claim that a feature works unless it has been tested.
+14. Provide implementation-ready recommendations rather than generic suggestions.
+15. Cite external research and identify assumptions.
+16. If source code or infrastructure access is unavailable, clearly state what cannot be verified.
+
+### FINAL SUCCESS CRITERIA
+
+The final proposed system must satisfy these objectives:
+
+- One unified platform for multiple insurance providers.
+- National geographic coverage.
+- No unnecessary duplication of medical center records.
+- Reliable contract information.
+- Fast and accurate Persian search.
+- Simple and consistent user experience.
+- Secure administrative access.
+- Scalable data management.
+- Reliable mobile experience.
+- Sustainable B2B business model.
+- Maintainable technical architecture.
+- Measurable quality and performance.
+
+**Final instruction:**
+
+Think like a team building a national digital infrastructure product, not simply improving a website.
+
+Do not prioritize adding more features over solving the underlying architecture, data reliability and user experience.
+
+Your recommendations must be practical, prioritized, evidence-based and suitable for implementation by a real development team.

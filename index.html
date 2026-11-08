@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="theme-color" content="#0a4c9a" />
+
+    <!-- Immediate PWA Prompt Capture for PC (Windows/Mac) and Mobile (Android) -->
+    <script>
+      window.__deferredPrompt = null;
+      window.__isPWAInstalled = false;
+      window.addEventListener('beforeinstallprompt', function(e) {
+        e.preventDefault();
+        window.__deferredPrompt = e;
+        window.dispatchEvent(new CustomEvent('pwa-prompt-available', { detail: e }));
+      });
+      window.addEventListener('appinstalled', function() {
+        window.__deferredPrompt = null;
+        window.__isPWAInstalled = true;
+        try { localStorage.setItem('krf_pwa_installed', 'true'); } catch(e){}
+        window.dispatchEvent(new CustomEvent('pwa-installed'));
+      });
+      var isPreviewHost = location.hostname.indexOf('run.app') !== -1 || location.hostname.indexOf('aistudio') !== -1;
+      if ('serviceWorker' in navigator && location.protocol !== 'file:' && !isPreviewHost) {
+        if (window.caches) {
+          caches.keys().then(function(keys) {
+            keys.forEach(function(k) {
+              if (k !== 'krf-app-v16') {
+                caches.delete(k);
+              }
+            });
+          });
+        }
+        navigator.serviceWorker.register('/sw.js', { scope: '/' })
+          .then(function(reg) {
+            reg.update();
+            document.addEventListener('visibilitychange', function() {
+              if (document.visibilityState === 'visible') {
+                reg.update();
+              }
+            });
+            if (reg.waiting) {
+              reg.waiting.postMessage({ type: 'SKIP_WAITING' });
+            }
+          })
+          .catch(function() {});
+      }
+    </script>
+    <title>تکمیلی آنلاین | سامانه مراکز درمانی و خسارت بیمه تکمیلی</title>
+    <meta name="description" content="تکمیلی آنلاین - سامانه جامع جستجو و مسیریابی مراکز درمانی طرف قرارداد بیمه تکمیلی، داروخانه‌های شبانه‌روزی، آزمایشگاه‌ها و راهنمای ثبت خسارت در ارومیه" />
+    <meta name="keywords" content="تکمیلی آنلاین, بیمه تکمیلی ارومیه, مراکز طرف قرارداد بیمه تکمیلی, بیمه کارآفرین ارومیه, داروخانه شبانه روزی ارومیه, آزمایشگاه طرف قرارداد, دندانپزشکی بیمه تکمیلی, دریافت خسارت درمان, takmilionline" />
+    <meta name="author" content="تکمیلی آنلاین · سعید جباری" />
+    <meta name="robots" content="index, follow" />
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://www.takmilionline.com" />
+
+    <!-- OpenGraph Metadata -->
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="fa_IR" />
+    <meta property="og:site_name" content="تکمیلی آنلاین" />
+    <meta property="og:title" content="تکمیلی آنلاین | سامانه هوشمند مراکز درمانی و خسارت بیمه تکمیلی" />
+    <meta property="og:description" content="مرجع جامع جستجو و مسیریابی مراکز درمانی طرف قرارداد بیمه تکمیلی، داروخانه‌های شبانه‌روزی، آزمایشگاه‌ها و راهنمای دریافت خسارت" />
+    <meta property="og:url" content="https://www.takmilionline.com" />
+    <meta property="og:image" content="https://www.takmilionline.com/screenshots/screenshot-desktop.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="سامانه تکمیلی آنلاین" />
+
+    <!-- Twitter Card Metadata -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="تکمیلی آنلاین" />
+    <meta name="twitter:description" content="سامانه هوشمند مراکز درمانی طرف قرارداد بیمه تکمیلی، داروخانه‌ها و راهنمای خسارت." />
+    <meta name="twitter:image" content="https://www.takmilionline.com/screenshots/screenshot-desktop.png" />
+
+    <!-- PWA & Mobile Web -->
+    <link rel="icon" type="image/svg+xml" href="/icon.svg" />
+    <link rel="icon" type="image/png" sizes="192x192" href="/icons/icon-192.png" />
+    <link rel="icon" type="image/png" sizes="512x512" href="/icons/icon-512.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/manifest.webmanifest" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-title" content="تکمیلی آنلاین" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+    <!-- Schema.org JSON-LD Structured Data with Rich Snippets & FAQPage -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebApplication",
+          "name": "تکمیلی آنلاین",
+          "alternateName": "TakmiliOnline",
+          "url": "https://takmilionline.com",
+          "applicationCategory": "HealthApplication",
+          "operatingSystem": "All",
+          "inLanguage": "fa-IR",
+          "description": "سامانه جامع جستجو و مسیریابی مراکز درمانی طرف قرارداد بیمه تکمیلی و راهنمای دریافت خسارت در ارومیه.",
+          "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "IRR"
+          },
+          "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.9",
+            "bestRating": "5",
+            "worstRating": "1",
+            "ratingCount": "148"
+          }
+        },
+        {
+          "@type": "MedicalWebPage",
+          "name": "مراکز درمانی طرف قرارداد بیمه تکمیلی در ارومیه",
+          "description": "نشانی، شماره تماس، مسیریابی و دسترسی شبانه‌روزی بیمارستان‌ها، درمانگاه‌ها، داروخانه‌ها و آزمایشگاه‌های ارومیه.",
+          "spatialCoverage": {
+            "@type": "Place",
+            "name": "ارومیه، آذربایجان غربی"
+          }
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "چگونه مراکز درمانی طرف قرارداد بیمه تکمیلی را در ارومیه پیدا کنیم؟",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "در سامانه تکمیلی آنلاین می‌توانید با جستجوی نام مرکز، پزشک، تخصص یا خیابان، تمام مراکز طرف قرارداد فعال در ارومیه را با شماره تماس و لوکیشن مشاهده کنید."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "آیا در مراکز طرف قرارداد هزینه در محل کسر می‌شود؟",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "در اکثر داروخانه‌ها، بیمارستان‌ها و آزمایشگاه‌های طرف قرارداد آنلاین، سهم بیمه با ارائه کدملی در محل کسر می‌شود و فقط مبلغ فرانشیز طبق قرارداد پرداخت می‌گردد."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "مدارک لازم برای دریافت خسارت متفرقه بیمه درمان چیست؟",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "اصل فاکتور ممهور به مهر مرکز درمانی، دستور پزشک، گزارش جواب آزمایش یا تصویربرداری، و در جراحی‌ها خلاصه پرونده و ریز داروها مورد نیاز است."
+              }
+            }
+          ]
+        }
+      ]
+    }
+    </script>
+
+    <!-- Non-blocking Font Loading with Instant Fallback -->
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" media="print" onload="this.media='all'" />
+    <noscript>
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800;900&display=swap" />
+    </noscript>
+  </head>
+  <body class="bg-[#f2f5fa] text-[#0f1b33] antialiased selection:bg-[#0a4c9a]/20">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

@@ -1,0 +1,8 @@
+[{
+      "relation": ["delegate_permission/common.handle_all_urls"],
+      "target": {
+        "namespace": "android_app",
+        "package_name": "app.vercel.bimeh_karafarin.twa",
+        "sha256_cert_fingerprints": ["F8:61:18:5A:BE:08:42:B7:07:BD:EF:8F:06:A7:E2:6F:47:F2:25:87:74:69:34:D9:9E:AC:62:78:38:00:44:2D"]
+      }
+    }]

@@ -1,0 +1,86 @@
+{
+  "id": "/",
+  "name": "تکمیلی آنلاین - مراکز درمانی و خسارت بیمه تکمیلی",
+  "short_name": "تکمیلی آنلاین",
+  "description": "سامانه هوشمند جستجو و مسیریابی مراکز درمانی طرف قرارداد بیمه تکمیلی در ارومیه، مراکز شبانه‌روزی و راهنمای ثبت خسارت",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "display_override": [
+    "standalone",
+    "minimal-ui",
+    "window-controls-overlay"
+  ],
+  "orientation": "portrait",
+  "lang": "fa",
+  "dir": "rtl",
+  "theme_color": "#0a4c9a",
+  "background_color": "#f2f5fa",
+  "categories": [
+    "medical",
+    "health",
+    "lifestyle"
+  ],
+  "icons": [
+    {
+      "src": "/icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/screenshots/screenshot-mobile.png",
+      "sizes": "1080x1920",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "نمای موبایل سامانه مراکز درمانی تکمیلی آنلاین"
+    },
+    {
+      "src": "/screenshots/screenshot-desktop.png",
+      "sizes": "1280x720",
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "نمای دسکتاپ سامانه مراکز درمانی تکمیلی آنلاین"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "مراکز درمانی شبانه‌روزی",
+      "short_name": "شبانه‌روزی",
+      "description": "مشاهده فوری تمام داروخانه‌ها و درمانگاه‌های ۲۴ ساعته",
+      "url": "/?filter=night",
+      "icons": [
+        {
+          "src": "/icons/icon-192.png",
+          "sizes": "192x192"
+        }
+      ]
+    },
+    {
+      "name": "داروخانه‌های طرف قرارداد",
+      "short_name": "داروخانه‌ها",
+      "description": "فهرست داروخانه‌های طرف قرارداد ارومیه و شبانه‌روزی",
+      "url": "/?filter=pharmacy",
+      "icons": [
+        {
+          "src": "/icons/icon-192.png",
+          "sizes": "192x192"
+        }
+      ]
+    }
+  ]
+}

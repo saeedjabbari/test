@@ -1,0 +1,8 @@
+[{
+      "relation": ["delegate_permission/common.handle_all_urls"],
+      "target": {
+        "namespace": "android_app",
+        "package_name": "com.takmilionline.www.twa",
+        "sha256_cert_fingerprints": ["4E:E8:FC:91:1A:16:7F:00:3C:7C:7A:6C:7E:2F:E9:7F:F1:5E:95:FD:3F:29:E7:7B:D3:E5:00:3A:7E:A9:27:03"]
+      }
+    }]

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="utf-8">
+    <title>در حال انتقال...</title>
+    <script>
+      // Single Page App redirect for GitHub Pages
+      (function() {
+        var path = window.location.pathname;
+        var hash = window.location.hash;
+        var search = window.location.search;
+        
+        // Find if this is an admin URL
+        var isAdmin = path.toLowerCase().indexOf('admin') !== -1 || 
+                      hash.toLowerCase().indexOf('admin') !== -1 ||
+                      search.toLowerCase().indexOf('admin') !== -1;
+        
+        // Extract repo segment if running under https://username.github.io/repo/
+        var pathSegments = path.split('/').filter(Boolean);
+        var base = '/';
+        if (pathSegments.length > 0 && !pathSegments[0].startsWith('index')) {
+          base = '/' + pathSegments[0] + '/';
+        }
+        
+        var target = base + (isAdmin ? '#admin' : '');
+        window.location.replace(target);
+      })();
+    </script>
+  </head>
+  <body style="font-family: system-ui, sans-serif; text-align: center; padding: 50px; direction: rtl;">
+    <p>در حال انتقال به برنامه...</p>
+  </body>
+</html>

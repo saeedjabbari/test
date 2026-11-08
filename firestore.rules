@@ -1,0 +1,44 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // Helper functions
+    function isValidId(id) {
+      return id is string && id.size() <= 128 && id.matches('^[a-zA-Z0-9_\\-]+$');
+    }
+
+    function incoming() {
+      return request.resource.data;
+    }
+
+    function existing() {
+      return resource.data;
+    }
+
+    // Schema validation for reports with realistic UTF-8 multibyte size limits for Persian text
+    function isValidReport(data) {
+      return data.keys().hasAll(['centerId', 'centerName', 'reason', 'status', 'createdAt']) &&
+        data.keys().hasOnly(['centerId', 'centerName', 'centerType', 'reason', 'reasonLabel', 'details', 'reporterContact', 'status', 'createdAt']) &&
+        data.centerId is number &&
+        data.centerName is string && data.centerName.size() <= 1000 &&
+        (!('centerType' in data) || (data.centerType is string && data.centerType.size() <= 500)) &&
+        data.reason in ['phone', 'address', 'contract', 'timing', 'other'] &&
+        (!('reasonLabel' in data) || (data.reasonLabel is string && data.reasonLabel.size() <= 500)) &&
+        (!('details' in data) || (data.details is string && data.details.size() <= 5000)) &&
+        (!('reporterContact' in data) || (data.reporterContact is string && data.reporterContact.size() <= 200)) &&
+        data.status in ['pending', 'verified', 'applied', 'rejected'] &&
+        data.createdAt is string && data.createdAt.size() <= 100;
+    }
+
+    // Reports collection - public submission with strict validation; reading/management restricted
+    match /reports/{reportId} {
+      allow create: if isValidId(reportId) && isValidReport(incoming());
+      allow get, list, update, delete: if request.auth != null;
+    }
+
+    // Default deny for all other paths
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}

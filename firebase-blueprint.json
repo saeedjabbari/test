@@ -1,0 +1,62 @@
+{
+  "entities": {
+    "report": {
+      "title": "Medical Center Report",
+      "description": "User report for medical center data changes or corrections in Urmia",
+      "type": "object",
+      "properties": {
+        "centerId": {
+          "type": "number",
+          "description": "Numeric key of the medical center"
+        },
+        "centerName": {
+          "type": "string",
+          "maxLength": 300,
+          "description": "Official name of the medical center"
+        },
+        "centerType": {
+          "type": "string",
+          "maxLength": 150,
+          "description": "Medical center specialty or category"
+        },
+        "reason": {
+          "type": "string",
+          "enum": ["phone", "address", "contract", "timing", "other"],
+          "description": "Category of the issue being reported"
+        },
+        "reasonLabel": {
+          "type": "string",
+          "maxLength": 200,
+          "description": "Persian label for the issue type"
+        },
+        "details": {
+          "type": "string",
+          "maxLength": 2000,
+          "description": "Detailed notes or new correct contact/address"
+        },
+        "reporterContact": {
+          "type": "string",
+          "maxLength": 100,
+          "description": "Optional contact number or name of the submitter"
+        },
+        "status": {
+          "type": "string",
+          "enum": ["pending", "verified", "applied", "rejected"],
+          "description": "Processing status by insurance admin"
+        },
+        "createdAt": {
+          "type": "string",
+          "format": "date-time",
+          "description": "ISO timestamp of report creation"
+        }
+      },
+      "required": ["centerId", "centerName", "reason", "status", "createdAt"]
+    }
+  },
+  "firestore": {
+    "/reports/{reportId}": {
+      "schema": "report",
+      "description": "Submissions by insured users reporting discrepancies in medical centers"
+    }
+  }
+}
